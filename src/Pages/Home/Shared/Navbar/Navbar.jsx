@@ -4,17 +4,27 @@ import "./Navbar.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../../context/AuthProvider";
 import { HiBars3BottomLeft } from "react-icons/hi2";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const { mobileMenu, setMobileMenu } = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div className="h-24 px-16 flex items-center justify-center md:justify-between border-b border-[#32323D] box-border sticky top-0 z-50 bg-secondary">
-      {mobileMenu === true && (
+      {mobileMenu && (
         <div className="flex flex-col items-center justify-center mobile-menu min-h-screen w-full z-50 absolute top-0 left-0 bg-[#010103]">
+          <div className="absolute left-16 top-8">
+            <button
+              onClick={() => setMobileMenu(false)}
+              className="text-white hover:text-primary"
+            >
+              <RxCross2 className="text-3xl" />
+            </button>
+          </div>
           <ul className="nav-menu font-jost font-medium text-white uppercase grid place-items-center gap-5 text-[15px]">
             <li>
               <NavLink
+              onClick={()=> setMobileMenu(false)}
                 className="nav-link hover:text-primary transition"
                 to="/"
               >
@@ -23,6 +33,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+              onClick={()=> setMobileMenu(false)}
                 className="nav-link hover:text-primary transition"
                 to="/menu"
               >
@@ -31,6 +42,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+              onClick={()=> setMobileMenu(false)}
                 className="nav-link hover:text-primary transition"
                 to="/about"
               >
@@ -58,8 +70,11 @@ const Navbar = () => {
         </div>
       )}
       <div className="block md:hidden absolute left-16">
-        <button onClick={() => setMobileMenu(true)} className="text-white hover:text-primary">
-          <HiBars3BottomLeft className="text-3xl"/>
+        <button
+          onClick={() => setMobileMenu(true)}
+          className="text-white hover:text-primary"
+        >
+          <HiBars3BottomLeft className="text-3xl" />
         </button>
       </div>
       <div>

@@ -45,7 +45,7 @@ const Login = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="bg-[#000000a9] w-full min-h-screen grid place-items-center">
-        <div className="w-1/4 grid place-items-center">
+        <div className="md:w-1/4 w-1/2 grid place-items-center">
           <Logo></Logo>
           <form
             className="font-jost w-full mt-10 grid gap-5"
