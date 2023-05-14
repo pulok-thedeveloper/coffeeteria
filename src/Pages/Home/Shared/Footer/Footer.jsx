@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-4 gap-10 p-16 border-t border-[#32323D] box-border">
+      <div className="grid lg:grid-cols-4 gap-10 p-16 border-t border-[#32323D] box-border">
         <div>
           <Logo></Logo>
           <p className="text-sm mt-5 font-jost">
@@ -33,7 +33,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="col-span-2 justify-self-center">
+        <div className="col-span-2 lg:justify-self-center">
           <h3 className="font-jost mb-8 uppercase text-primary font-semibold underline underline-offset-8">
             Coffeteria Menu
           </h3>

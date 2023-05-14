@@ -18,7 +18,7 @@ const Menu = () => {
         </button>
         <h2 className="font-bebas text-4xl text-white">Coffee Popular Menu</h2>
       </div>
-      <div className="grid grid-cols-3 gap-x-10 gap-y-32">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-32">
         {
           products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
         }

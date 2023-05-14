@@ -2,9 +2,9 @@ const Logo = () => {
     return (
         <div>
             <svg
-        width="200"
+        
         viewBox="0 0 370 101.44106644013107"
-        className="css-1j8o68f"
+        className="css-1j8o68f lg:w-[150px] w-[100px]"
       >
         <defs id="SvgjsDefs1018">
           <linearGradient id="SvgjsLinearGradient1022">

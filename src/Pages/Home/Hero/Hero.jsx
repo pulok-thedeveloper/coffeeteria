@@ -6,9 +6,9 @@ const Hero = () => {
     <div className="">
       <div
         style={{ backgroundImage: `url(${hero})` }}
-        className="min-h-screen w-full grid grid-cols-2 items-center bg-cover"
+        className="w-full grid md:grid-cols-2 items-center bg-cover"
       >
-        <div className="px-16">
+        <div className="px-16 py-32">
           <h1 className="font-bebas uppercase text-8xl text-white mb-5">
             Distinct<br /> Coffee Aroma
           </h1>
