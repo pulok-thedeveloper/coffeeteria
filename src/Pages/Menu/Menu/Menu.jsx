@@ -5,10 +5,10 @@ const Menu = () => {
   const [products, setProducts] = useState();
 
     useEffect(() => {
-        fetch('product.json')
+        fetch('https://coffeeteria-server.vercel.app/menu')
         .then(res => res.json())
-        .then(data => setProducts(data))
-    },[products])
+        .then(data => setProducts(data.data))
+    },[])
 
   return (
     <div className="min-h-screen p-16 bg-secondary mb-24">

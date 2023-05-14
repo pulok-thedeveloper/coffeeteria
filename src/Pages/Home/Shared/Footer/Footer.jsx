@@ -7,9 +7,9 @@ const Footer = () => {
   const [menu, setMenu] = useState();
 
   useEffect(() => {
-    fetch("product.json")
+    fetch("https://coffeeteria-server.vercel.app/menu")
       .then((res) => res.json())
-      .then((data) => setMenu(data));
+      .then((data) => setMenu(data.data));
   }, [menu]);
 
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
           <ul className="grid grid-cols-2 gap-x-10 gap-y-3">
             {menu?.map((item) => (
               <li className="font-jost text-xs uppercase" key={item._id}>
-                {item._id}. {item.title}
+                {item.id}. {item.title}
               </li>
             ))}
           </ul>

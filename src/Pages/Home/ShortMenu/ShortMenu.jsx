@@ -6,9 +6,9 @@ const ShortMenu = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
-    fetch("product.json")
+    fetch("https://coffeeteria-server.vercel.app/menu")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data.data));
   }, [products]);
 
   return (
